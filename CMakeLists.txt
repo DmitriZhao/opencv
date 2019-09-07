@@ -474,7 +474,8 @@ endif()
 #  Path for build/platform -specific headers
 # ----------------------------------------------------------------------------
 ocv_update(OPENCV_CONFIG_FILE_INCLUDE_DIR "${CMAKE_BINARY_DIR}/" CACHE PATH "Where to create the platform-dependant cvconfig.h")
-ocv_include_directories(${OPENCV_CONFIG_FILE_INCLUDE_DIR})
+ocv_include_directories(/usr/local/include/
+${OPENCV_CONFIG_FILE_INCLUDE_DIR})
 
 # ----------------------------------------------------------------------------
 #  Path for additional modules

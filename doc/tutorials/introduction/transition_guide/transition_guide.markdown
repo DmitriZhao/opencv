@@ -172,7 +172,7 @@ Following code snippets illustrate the difference (from `video_homography.cpp` e
 @code{.cpp}
 using namespace cv;
 // ====== 2.4 =======
-#include "opencv2/features2d/features2d.hpp"
+#include "opencv2/features2d.hpp"
 BriefDescriptorExtractor brief(32);
 GridAdaptedFeatureDetector detector(new FastFeatureDetector(10, true), DESIRED_FTRS, 4, 4);
 // ...

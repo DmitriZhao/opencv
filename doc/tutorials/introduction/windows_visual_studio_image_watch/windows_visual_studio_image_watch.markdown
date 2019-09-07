@@ -34,7 +34,7 @@ detector. To build the program, create a console application project in Visual S
 // Test application for the Visual Studio Image Watch Debugger extension
 
 #include <iostream>                        // std::cout
-#include <opencv2/core/core.hpp>           // cv::Mat
+#include <opencv2/core.hpp>           // cv::Mat
 #include <opencv2/imgcodecs/imgcodecs.hpp>     // cv::imread()
 #include <opencv2/imgproc/imgproc.hpp>     // cv::Canny()
 

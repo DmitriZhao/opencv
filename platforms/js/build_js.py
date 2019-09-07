@@ -54,7 +54,7 @@ def check_file(d):
     return False
 
 def determine_emcc_version(emscripten_dir):
-    ret = subprocess.check_output([os.path.join(emscripten_dir, "emcc"), "--version"])
+    ret = subprocess.check_output([os.path.join(emscripten_dir, "emcc"), "--version"]).decode('UTF-8')
     m = re.match(r'^emcc.*(\d+\.\d+\.\d+)', ret, flags=re.IGNORECASE)
     return m.group(1)
 
@@ -115,7 +115,7 @@ class Builder:
                "-DWITH_OPENNI2=OFF",
                "-DWITH_PNG=OFF",
                "-DWITH_TBB=OFF",
-               "-DWITH_PTHREADS_PF=OFF",
+               "-DWITH_PTHREADS_PF=ON",
                "-DWITH_TIFF=OFF",
                "-DWITH_V4L=OFF",
                "-DWITH_OPENCL=OFF",

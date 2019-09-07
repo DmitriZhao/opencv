@@ -465,10 +465,10 @@ EMSCRIPTEN_BINDINGS(binding_utils)
     emscripten::function("rotatedRectBoundingRect2f", select_overload<Rect2f(const cv::RotatedRect&)>(&binding_utils::rotatedRectBoundingRect2f));
 
     emscripten::value_array<cv::Scalar_<double>> ("Scalar")
-        .element(index<0>())
-        .element(index<1>())
-        .element(index<2>())
-        .element(index<3>());
+        .element(emscripten::index<0>())
+        .element(emscripten::index<1>())
+        .element(emscripten::index<2>())
+        .element(emscripten::index<3>());
 
     emscripten::value_object<binding_utils::MinMaxLoc>("MinMaxLoc")
         .field("minVal", &binding_utils::MinMaxLoc::minVal)
@@ -587,6 +587,7 @@ EMSCRIPTEN_BINDINGS(binding_utils)
         .function("GetTrackingState", &ORB_SLAM2::System::GetTrackingState)
         .function("GetTrackedMapPoints", &ORB_SLAM2::System::GetTrackedMapPoints)
         .function("GetTrackedKeyPointsUn", &ORB_SLAM2::System::GetTrackedKeyPointsUn)
-        .function("GetKeyFramesInMap", &ORB_SLAM2::System::GetKeyFramesInMap)
-        .function("GetMapPointsInMap", &ORB_SLAM2::System::GetMapPointsInMap);
+        // .function("GetKeyFramesInMap", &ORB_SLAM2::System::GetKeyFramesInMap)
+        // .function("GetMapPointsInMap", &ORB_SLAM2::System::GetMapPointsInMap)
+        ;
 }
